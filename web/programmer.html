@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yuster taskboard</title>
+	<meta charset='utf-8' />
+	<meta name='viewport' content='user-scalable=no, initial-scale=1' />
+	<link rel='icon' type='image/png' href='Yuster_logo.webp' />
+	<link rel='stylesheet' href='styles.css'>
+	<script src='com.js'></script>
+	<script>
+		function clean_string(input) {
+			return input.replaceAll('å', 'a')
+				.replaceAll('ä', 'a')
+				.replaceAll('ö', 'o')
+				.replaceAll('Å', 'A')
+				.replaceAll('Ä', 'A')
+				.replaceAll('Ö', 'O');
+		}
+	</script>
+</head>
+<body>
+
+<table class='center' width='276px'><tbody>
+	<tr>
+		<td><img src='Yuster_logo.webp' alt='Yuster logo' width='50'></td>
+		<td><h1>TaskBoard</h1></td>
+	</tr>
+	<form action='post' method='post'>
+		<tr class='input_area'><td colspan='2'>
+			<textarea id='title' name='title' rows='1' cols='14'>Title</textarea><br>
+			<textarea id='desc' name='desc' rows='4' cols='34'>Description</textarea>
+		</td></tr>
+	</form>
+	<tr class='submit_button'>
+		<td colspan='2'>
+			<input id='create' class='button' type='submit' value='Create task' disabled></input>
+			<input id='clear' class='button' type='submit' value='Clear tag' disabled></input>
+		</td>
+	</tr>
+	<tr class='connect_button'>
+		<td colspan='2'>
+			<input id='btnConnect' class='button' type='submit' value='Connect to serial'></input>
+			<input id='btnDisconnect' class='button' type='submit' value='Disconnect' disabled></input>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2'>
+			<textarea id='log' readonly placeholder='Received / status...' rows='4' cols='34'></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2'><h3>© Yuster Electronics 2025</h3></td>
+	</tr>
+</tbody></table>
+
+<script>
+	const btnConnect = document.getElementById('btnConnect');
+	const btnDisconnect = document.getElementById('btnDisconnect');
+	const sendBtn = document.getElementById('create');
+	const clearBtn = document.getElementById('clear');
+	const title = document.getElementById('title');
+	const desc = document.getElementById('desc');
+	const log = document.getElementById('log');
+	btnConnect.onclick = connect;
+	btnDisconnect.onclick = disconnect;
+	create.onclick = send_tag;
+	clear.onclick = clear_tag;
+</script>
+
+</body>
+</html>

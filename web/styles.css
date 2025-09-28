@@ -1,0 +1,62 @@
+@font-face {  
+    src: url(VaisalaSans-Light.woff2) format("truetype");
+}
+@font-face {  
+    src: url(VaisalaSans-Medium.woff2) format("truetype");
+}
+table {
+    text-align: center;
+}
+/*        table td {
+    border: 1px solid black;
+}*/
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+tr.input_area td {
+    background: #cccccc;
+}
+tr.submit_button td {
+    padding-top: 1em;
+}
+tr.connect_button td {
+    padding-top: 5em;
+}
+h1 {
+    font-family: "Vaisala Sans Medium";
+    font-size: 28px;
+}
+h3 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+textarea {
+    overflow: hidden;
+    border-width: 0px;
+    background: #cccccc;
+    color: #222222;
+}
+textarea#title {
+    font-family: 'Pockota';
+    font-size: 32px;
+    resize: none;
+    text-align: center;
+}
+textarea#desc {
+    font-family: 'Vaisala Sans Light';
+    font-size: 15px;
+    resize: none;
+}
+textarea#log {
+    font-family: 'Vaisala Sans Light';
+    font-size: 15px;
+    resize: none;
+}
+input.button {
+    font-family: "Tahoma";
+    font-size: 18px;
+}
+.hidden {
+    display: none;
+}
